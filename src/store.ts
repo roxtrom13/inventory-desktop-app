@@ -3,15 +3,16 @@ import { createStore } from "solid-js/store";
 import {
   home,
   shoppingBag,
-  collection,
+  circleStack,
   cog,
   bookOpen,
 } from "solid-heroicons/solid";
 
-import { MenuItem } from "./types";
+import { MenuItem, User } from "./types";
 
 interface AppStore {
   menuItems: Array<MenuItem>;
+  user: User | null;
 }
 
 export default createStore<AppStore>({
@@ -43,7 +44,7 @@ export default createStore<AppStore>({
       name: "Inventario",
       route: "/inventory",
       open: false,
-      icon: collection,
+      icon: circleStack,
       children: [
         {
           name: "Categorías",
@@ -84,4 +85,5 @@ export default createStore<AppStore>({
       ],
     },
   ],
+  user: null,
 });
