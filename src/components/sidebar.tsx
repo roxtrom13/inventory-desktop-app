@@ -4,7 +4,7 @@ import { Icon } from "solid-heroicons";
 import {
   chevronDown,
   chevronUp,
-  musicNote,
+  musicalNote,
 } from "solid-heroicons/solid";
 
 import Store from "../store";
@@ -23,7 +23,7 @@ export default function Sidebar() {
   return (
     <div class="fixed left-0 top-0 bg-gradient-to-b from-cyan-600 to-emerald-500 h-full w-24 md:w-60 z-50 transition-all ease-linear">
       <div class="p-6 flex h-16 w-full items-center">
-        <Icon class="text-white" path={musicNote} height="1.5rem"></Icon>
+        <Icon class="text-white" path={musicalNote} height="1.5rem"></Icon>
         <p class="hidden md:block font-sans text-2xl font-semibold text-white pl-2">Musicman</p>
       </div>
       <div class="relative py-2 pr-1">
