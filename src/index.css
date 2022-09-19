@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.error-form-message {
+  @apply text-red-600 text-sm font-light;
+}
+
+.form-label {
+  @apply font-light text-gray-900;
+}
+
+.form-input {
+  @apply w-full p-2 pl-10 text-gray-800 placeholder-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300;
+}
+
+.btn {
+  @apply py-2 px-6 text-sm font-semibold text-center transition duration-100 rounded-md md:text-lg focus:outline-none focus:ring-2 focus:ring-blue-300 hover:shadow-lg;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-blue-400 text-white;
+}
