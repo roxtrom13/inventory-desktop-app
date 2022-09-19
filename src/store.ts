@@ -12,7 +12,8 @@ import { MenuItem, User } from "./types";
 
 interface AppStore {
   menuItems: Array<MenuItem>;
-  user: User | null;
+  // TODO: change any to null
+  user: User | any;
 }
 
 export default createStore<AppStore>({
