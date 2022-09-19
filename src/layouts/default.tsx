@@ -11,7 +11,7 @@ export default function Default() {
     <div class="relative min-h-screen w-full">
       <SideBar />
       <Topbar />
-      <section class="p-2 relative min-h-screen left-24 md:left-60 w-[calc(100%-6rem)] md:w-[calc(100%-15rem)] z-10 bg-pink-400">
+      <section class="p-2 relative min-h-screen left-24 md:left-60 w-[calc(100%-6rem)] md:w-[calc(100%-15rem)] z-10">
         <Routes>
           <Route path="/" component={Home} />
           <Route path="/sales" component={Sales} />
