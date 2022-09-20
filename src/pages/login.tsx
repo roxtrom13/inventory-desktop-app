@@ -41,6 +41,7 @@ export default function Login() {
           }}
         >
           {(form) => {
+            //@ts-ignore
             const formHandler = form.formHandler;
             const usernameError = createMemo(() =>
               form.errors.username && form.touched.username
