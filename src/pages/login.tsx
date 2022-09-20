@@ -117,13 +117,13 @@ export default function Login() {
                   <p class="error-form-message">{passwordError()}</p>
                 </div>
                 <button
-                  class="btn btn-primary mt-3"
-                  classList={{ "cursor-not-allowed": state().loading }}
+                  class="btn btn-primary mt-6"
+                  classList={{ "cursor-not-allowed": state.loading }}
                   type="submit"
-                  disabled={state().loading}
+                  disabled={state.loading}
                 >
                   <Show
-                    when={state().loading}
+                    when={state.loading}
                     fallback={<span>Iniciar sesión</span>}
                   >
                     <div class="flex justify-center items-center">
