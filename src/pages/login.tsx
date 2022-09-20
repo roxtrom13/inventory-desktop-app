@@ -1,20 +1,30 @@
 import { createMemo, createSignal, Show } from "solid-js";
+import { createStore } from "solid-js/store";
+import Store from "../store";
 
 import { Form } from "solid-js-form";
 import * as Yup from "yup";
 
 export default function Login() {
-  const [state, setState] = createSignal({
+  const [store, setStore] = Store;
+
+  const [state, setState] = createStore({
     loading: false,
   });
 
+  // const [state, setState] = createSignal({
+  //   loading: false,
+  // });
+
   async function handleLogin() {
     console.log("clicked!");
-    setState({ loading: true });
+    setState("loading", true);
     setTimeout(() => {
-      setState({ loading: false });
+      setState("loading", false);
     }, 2000);
   }
+
+  // TODO: Change the form validation messages to custom messages
 
   return (
     <div class="w-screen h-screen bg-gradient-to-b from-cyan-400 to-emerald-500 flex justify-center items-center">
