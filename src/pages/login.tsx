@@ -18,12 +18,22 @@ export default function Login() {
   // const [state, setState] = createSignal({
   //   loading: false,
   // });
+  
+  const dumpUser: User = {
+    id: 1,
+    username: "aoeusnth",
+    password: "aoeusnth",
+    first_name: "roier",
+    last_name: "palomino",
+    email: "aoeusnth@mail.com",
+  };
 
   async function handleLogin() {
     console.log("clicked!");
     setState("loading", true);
     setTimeout(() => {
       setState("loading", false);
+      setStore("user", dumpUser);
     }, 2000);
   }
 
