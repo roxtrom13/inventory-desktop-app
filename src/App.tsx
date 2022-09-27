@@ -10,7 +10,7 @@ const App: Component = () => {
   const [store] = Store;
 
   return (
-    <Show when={!!store.user}
+    <Show when={!store.user}
       fallback={<Blank />}
     >
       <Default />
