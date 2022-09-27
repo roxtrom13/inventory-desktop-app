@@ -90,7 +90,7 @@ export default function Login() {
                       />
                     </svg>
                     <input
-                      class="form-input"
+                      class="form-input placeholder:text-slate-400"
                       value={form.values.username}
                       type="email"
                       name="username"
@@ -118,7 +118,7 @@ export default function Login() {
                       />
                     </svg>
                     <input
-                      class="form-input"
+                      class="form-input placeholder:text-slate-400"
                       value={form.values.password}
                       type="password"
                       name="password"
