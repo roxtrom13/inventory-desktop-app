@@ -1,5 +1,4 @@
-import { children } from "solid-js";
-import { mergeProps } from "solid-js";
+import Store from "../../store";
 
 import { Icon } from "solid-heroicons";
 import { chevronDown, chevronUp, arrowLeftOnRectangle } from "solid-heroicons/solid-mini";
@@ -12,25 +11,19 @@ import {
   MenuItem,
 } from "solid-headless";
 
-enum DropdownPosition {
-  "left",
-  "right",
-}
+// interface DropdownProps {
+//   children: any;
+//   position?: DropdownPosition;
+//   class?: string;
+//   onClick?: Function | Promise<any>;
+//   disabled?: boolean;
+// }
 
-interface DropdownProps {
-  children: any;
-  position?: DropdownPosition;
-  class?: string;
-  onClick?: Function | Promise<any>;
-  disabled?: boolean;
-}
+const [store, setStore] = Store;
 
-function print() {
-  console.log("selected!!");
-}
-
-function endSession() {
-
+function performLogout() {
+  localStorage.removeItem("user");
+  setStore("user", null);
 }
 
 function classNames(...classes: (string | boolean | undefined)[]): string {
@@ -45,7 +38,8 @@ function classNames(...classes: (string | boolean | undefined)[]): string {
 //   );
 // }
 
-export default function Dropdown() {
+export default function DropdownAvatar() {
+
   // const props = mergeProps(
   //   {
   //     position: DropdownPosition.left,
@@ -58,7 +52,7 @@ export default function Dropdown() {
 
   return (
     <Popover defaultOpen={false} class="relative">
-      {({ isOpen, setOpen }) => (
+      {({ isOpen }) => (
         <>
           <div class="flex flex-row items-center">
             <PopoverButton>
@@ -106,6 +100,7 @@ export default function Dropdown() {
                 <MenuItem
                   as="button"
                   class="flex flex-row text-sm p-1 text-left rounded hover:bg-purple-600 hover:text-white focus:outline-none focus:bg-purple-600 focus:text-white"
+                  onClick={() => performLogout()}
                 >
                   <Icon height="20px" path={arrowLeftOnRectangle} />
                   Salir
