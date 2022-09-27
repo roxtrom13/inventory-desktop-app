@@ -1132,6 +1132,13 @@ solid-app-router@^0.4.2:
   resolved "https://registry.yarnpkg.com/solid-app-router/-/solid-app-router-0.4.2.tgz#67a0e1769e1e98d7c73256fe46430ee234324ce0"
   integrity sha512-+NrLcmqYssx8DcbpcLBaYPqfTRtS+rkfbxMhLH8MHfTcTkdZfrkWQK7lsUvuPCebGEzfaPZJvHqBwhPrCXAmxg==
 
+solid-headless@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/solid-headless/-/solid-headless-0.13.0.tgz#a2cb09cbb9397dfcde1770c4d020cde3ffd7ae3e"
+  integrity sha512-N118iPl7W5lyug4K+4c0cwM8YR2yEVJ/3H4wq6tVijATHfXfLnB1ACFI5GGHSXlwu70PUzaGSKwcVqLlloUMyA==
+  dependencies:
+    solid-use "^0.5.0"
+
 solid-heroicons@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/solid-heroicons/-/solid-heroicons-3.1.0.tgz#1881cec8728825007ba9a3fb6ab95aea42c1e231"
@@ -1162,6 +1169,11 @@ solid-refresh@^0.4.1:
     "@babel/generator" "^7.18.2"
     "@babel/helper-module-imports" "^7.16.7"
     "@babel/types" "^7.18.4"
+
+solid-use@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/solid-use/-/solid-use-0.5.0.tgz#4414bf85ce001d36738a2ac7fd871a90fa809d99"
+  integrity sha512-z1AaS99SL3gNP70K4+XIVKGXDRI56m3Q6Q4X63bfgw0kaN6cwT4SAyFZAmIRjHcvf5rOMRQfNgUV4YVDha+LcQ==
 
 source-map-js@^1.0.2:
   version "1.0.2"
