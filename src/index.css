@@ -20,3 +20,11 @@
 .btn-primary {
   @apply bg-gradient-to-r from-blue-600 to-blue-400 text-white;
 }
+
+.dropdown-item {
+  @apply flex flex-row text-sm p-2 text-left rounded hover:bg-gray-100 focus:outline-none;
+}
+
+.dropdown-item2 {
+  @apply dropdown-item text-sm py-4 px-4 font-sans block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100;
+}
