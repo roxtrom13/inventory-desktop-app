@@ -28,3 +28,7 @@
 .dropdown-item2 {
   @apply dropdown-item text-sm py-4 px-4 font-sans block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100;
 }
+
+.category-container {
+  @apply rounded-md bg-zinc-200 scroll-smooth px-2 pt-2 pb-24 max-h-screen overflow-y-auto;
+}
