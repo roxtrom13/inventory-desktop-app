@@ -7,6 +7,8 @@ import {
   musicalNote,
 } from "solid-heroicons/solid";
 
+// TODO: make the sidebar rounded and floating, probably white
+
 import Store from "../store";
 import { MenuItem } from "../types";
 
