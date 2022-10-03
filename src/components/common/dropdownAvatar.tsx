@@ -60,10 +60,11 @@ export default function DropdownAvatar() {
       {({ isOpen }) => (
         <>
           <div class="flex flex-row items-center">
+            <p class="text-white mr-2 font-semibold">{ userName() }</p>
             <PopoverButton>
               {/* THIS IS THE CHILD */}
               <img
-                class="inline-block h-12 w-12 rounded-full ring-2 ring-white"
+                class="inline-block h-12 w-12 rounded-full"
                 src="https://avatars.githubusercontent.com/u/30743104?v=4"
               ></img>
               {/* END OF THE CHILD */}
@@ -86,29 +87,32 @@ export default function DropdownAvatar() {
             leaveTo="opacity-0 -translate-y-1 scale-50"
           >
             <PopoverPanel
-              unmount={false}
-              class="absolute z-10 px-4 mt-3 transform -translate-x-2/3 left-1/2 sm:px-0 lg:max-w-3xl"
+              unmount={true}
+              class="absolute z-10 px-4 mt-3 transform -translate-x-2/3 left-1/3 sm:px-0 lg:max-w-3xl"
             >
-              <Menu class="overflow-hidden w-64 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white flex flex-col space-y-1 p-1">
+              <Menu class="overflow-hidden w-64 rounded-lg shadow-lg ring-2 ring-black ring-opacity-5 bg-white flex flex-col py-3 px-1">
                 <MenuItem
                   as="button"
-                  class="text-sm p-1 text-left rounded hover:bg-purple-600 hover:text-white focus:outline-none focus:bg-purple-600 focus:text-white"
+                  class="dropdown-item2"
                 >
-                  Open Link in New Tab
+                  <Icon class="mr-2" height="20px" path={user} />
+                  <span>Mi perfil</span>
                 </MenuItem>
                 <MenuItem
                   as="button"
-                  class="text-sm p-1 text-left rounded hover:bg-purple-600 hover:text-white focus:outline-none focus:bg-purple-600 focus:text-white"
+                  class="dropdown-item2"
                 >
-                  hola
+                  <Icon class="mr-2" height="20px" path={adjustmentsVertical} />
+                  <span>Configuración</span>
                 </MenuItem>
+                <Separator/>
                 <MenuItem
                   as="button"
-                  class="flex flex-row text-sm p-1 text-left rounded hover:bg-purple-600 hover:text-white focus:outline-none focus:bg-purple-600 focus:text-white"
+                  class="dropdown-item2"
                   onClick={() => performLogout()}
                 >
-                  <Icon height="20px" path={arrowLeftOnRectangle} />
-                  Salir
+                  <Icon class="mr-2" height="20px" path={arrowLeftOnRectangle} />
+                  <span>Salir</span>
                 </MenuItem>
               </Menu>
             </PopoverPanel>
