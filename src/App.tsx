@@ -9,7 +9,6 @@ const image = new File(["blob"], "ga");
 console.log(image);
 
 const App: Component = () => {
-
   const [store, setStore] = Store;
 
   function loggedInUser() {
@@ -24,9 +23,7 @@ const App: Component = () => {
   }
 
   return (
-    <Show when={loggedInUser()}
-      fallback={<Blank />}
-    >
+    <Show when={loggedInUser()} fallback={<Blank />}>
       <Default />
     </Show>
   );
