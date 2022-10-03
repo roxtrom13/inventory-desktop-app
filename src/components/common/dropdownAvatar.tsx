@@ -1,7 +1,7 @@
 import Store from "../../store";
 
 import { Icon } from "solid-heroicons";
-import { chevronDown, chevronUp, arrowLeftOnRectangle } from "solid-heroicons/solid-mini";
+import { chevronDown, chevronUp, arrowLeftOnRectangle, adjustmentsVertical, user } from "solid-heroicons/solid-mini";
 import {
   Popover,
   PopoverButton,
