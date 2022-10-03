@@ -24,21 +24,26 @@ const [store, setStore] = Store;
 function performLogout() {
   localStorage.removeItem("user");
   setStore("user", null);
+  location.reload();
 }
 
 function classNames(...classes: (string | boolean | undefined)[]): string {
   return classes.filter(Boolean).join(" ");
 }
 
-// function Separator() {
-//   return (
-//     <div class="flex items-center" aria-hidden="true">
-//       <div class="w-full border-t border-gray-200" />
-//     </div>
-//   );
-// }
+function Separator() {
+  return (
+    <div class="flex items-center" aria-hidden="true">
+      <div class="w-full border-t border-gray-200 my-1" />
+    </div>
+  );
+}
 
 export default function DropdownAvatar() {
+
+  function userName(): string {
+    return `${store.user?.first_name}`;
+  }
 
   // const props = mergeProps(
   //   {
