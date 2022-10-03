@@ -12,7 +12,6 @@ import { MenuItem, User } from "./types";
 
 interface AppStore {
   menuItems: Array<MenuItem>;
-  // TODO: change any to null
   user: User | null;
 }
 
@@ -33,10 +32,10 @@ export default createStore<AppStore>({
       children: [
         {
           name: "Crear",
-          route: "/new",
+          route: "/",
         },
         {
-          name: "Registro",
+          name: "Registros",
           route: "/",
         },
       ],
