@@ -28,12 +28,14 @@ export default function Login() {
     email: "aoeusnth@mail.com",
   };
 
-  async function handleLogin() {
-    console.log("clicked!");
+  async function performLogin() {
     setState("loading", true);
     setTimeout(() => {
       setState("loading", false);
       setStore("user", dumpUser);
+      localStorage.setItem("user", JSON.stringify(dumpUser));
+      console.log(JSON.parse(localStorage.getItem("user")));
+      console.log( store.user);
     }, 2000);
   }
 
@@ -49,7 +51,7 @@ export default function Login() {
             password: Yup.string().required(),
           }}
           onSubmit={async (form) => {
-            await handleLogin();
+            await performLogin();
             console.log(form.values);
           }}
         >
@@ -95,6 +97,7 @@ export default function Login() {
                       type="email"
                       name="username"
                       placeholder="Email"
+                      autofocus
                       //@ts-ignore
                       use:formHandler
                     />
@@ -133,7 +136,7 @@ export default function Login() {
                   class="btn-primary"
                   loading={state.loading}
                   loadingText="Espere"
-                  onClick={handleLogin()}
+                  onClick={performLogin()}
                 >
                   Iniciar sesión
                 </ButtonComponent>
